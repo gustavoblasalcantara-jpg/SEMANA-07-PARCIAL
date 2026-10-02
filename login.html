@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Perú Solidario — Acceso de Usuarios</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-contenedor">
+      <div class="marca">
+        <div class="marca-texto">
+          <span class="marca-nombre">Banco Perú Solidario</span>
+          <span class="marca-lema">Módulo de Autenticación</span>
+        </div>
+      </div>
+      <nav class="nav-principal">
+        <ul>
+          <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor-login">
+    
+    <!-- Sección de Iniciar Sesión -->
+    <section class="tarjeta-auth">
+      <h2>Iniciar Sesión</h2>
+      
+      <div id="mensaje-login" style="display: none; padding: 12px; margin-bottom: 15px; border-radius: 4px;"></div>
+
+      <form id="form-login">
+        <div class="campo">
+          <label for="login-correo">Correo electrónico:</label>
+          <input type="email" id="login-correo" required placeholder="correo@ejemplo.com" autocomplete="email">
+        </div>
+        <div class="campo">
+          <label for="login-password">Contraseña:</label>
+          <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button type="submit" id="btn-login" class="boton boton-primario" style="width: 100%; padding: 0.75rem;">Ingresar</button>
+      </form>
+    </section>
+
+    <!-- Sección de Registro de Cuenta -->
+    <section class="tarjeta-auth">
+      <h2>Crear Cuenta de Beneficiario</h2>
+
+      <div id="mensaje-registro" style="display: none; padding: 12px; margin-bottom: 15px; border-radius: 4px;"></div>
+
+      <form id="form-registro">
+        <div class="campo">
+          <label for="reg-nombre">Nombre completo:</label>
+          <input type="text" id="reg-nombre" required placeholder="Ej: Juan Pérez" autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="reg-correo">Correo electrónico:</label>
+          <input type="email" id="reg-correo" required placeholder="correo@ejemplo.com" autocomplete="email">
+        </div>
+        <div class="campo">
+          <label for="reg-password">Contraseña:</label>
+          <input type="password" id="reg-password" required placeholder="••••••••" autocomplete="new-password">
+        </div>
+        <button type="submit" id="btn-registro" class="boton boton-secundario" style="width: 100%; padding: 0.75rem;">Registrarse en Neon</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/auth/login.js"></script>
+</body>
+</html>

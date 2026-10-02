@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Ilustración de sede bancaria con cordillera andina">
+<defs><linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ec5ee"/><stop offset="1" stop-color="#eef5fc"/></linearGradient></defs>
+<rect width="640" height="320" fill="url(#c)"/><circle cx="520" cy="70" r="34" fill="#ffd166"/>
+<path d="M0 230 L110 120 L190 200 L290 90 L400 210 L480 140 L640 240 V320 H0Z" fill="#6b8fb8"/>
+<path d="M290 90 L262 127 L282 120 L296 135 L312 118 L326 127Z" fill="#fff"/>
+<rect x="150" y="170" width="340" height="120" fill="#fff" stroke="#003366" stroke-width="4"/>
+<path d="M135 172 L320 100 L505 172Z" fill="#003366"/>
+<g fill="#003366"><rect x="175" y="190" width="24" height="90"/><rect x="225" y="190" width="24" height="90"/><rect x="391" y="190" width="24" height="90"/><rect x="441" y="190" width="24" height="90"/></g>
+<rect x="285" y="210" width="70" height="80" fill="#c8102e"/><circle cx="320" cy="140" r="14" fill="#ffd166"/>
+<rect x="0" y="290" width="640" height="30" fill="#2f5d3a"/></svg>

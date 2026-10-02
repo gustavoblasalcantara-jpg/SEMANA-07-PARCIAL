@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPS — Mis Quejas y Reclamos</title>
+  <link rel="stylesheet" href="css/quejas.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="marca"><span class="marca-nombre">Banco Perú Solidario</span></div>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><button id="btn-logout" class="boton-logout">Cerrar Sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenedor-principal">
+    <h1>Libro de Quejas y Reclamos</h1>
+    <form id="form-queja" class="formulario">
+      <div class="campo"><label for="q-tipo">Tipo</label>
+        <select id="q-tipo" required><option value="queja">Queja</option><option value="reclamo">Reclamo</option><option value="sugerencia">Sugerencia</option></select></div>
+      <div class="campo"><label for="q-desc">Descripción</label>
+        <textarea id="q-desc" rows="4" required minlength="10" placeholder="Cuéntanos qué ocurrió"></textarea></div>
+      <button type="submit" class="boton boton-primario">Enviar</button>
+      <p id="q-msg" role="status"></p>
+    </form>
+    <h2>Mis envíos</h2>
+    <table class="tabla-registros"><thead><tr><th>N°</th><th>Tipo</th><th>Descripción</th><th>Estado</th><th>Respuesta</th></tr></thead>
+    <tbody id="tabla-quejas-cliente"></tbody></table>
+  </main>
+  <script type="module" src="js/quejas/quejas.js"></script>
+</body>
+</html>

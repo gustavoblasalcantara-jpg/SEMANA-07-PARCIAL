@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPS — Mis Registros</title>
+  <link rel="stylesheet" href="css/consulta.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="marca">
+      <span class="marca-nombre">Banco Perú Solidario</span>
+    </div>
+    <nav class="nav-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="consulta.html" class="activo">Mis Registros</a></li>
+        <li><button id="btn-logout" class="boton-logout">Cerrar Sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <h2>Mis Inscripciones a Programas Sociales</h2>
+    <p>A continuación se muestran los trámites registrados a tu nombre:</p>
+
+    <div class="tabla-contenedor">
+      <table class="tabla-registros">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Beneficiario</th>
+            <th>DNI</th>
+            <th>Programa</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-cuerpo-consulta">
+          <!-- Carga dinámica -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Ruta actualizada a la estructura js/ -->
+  <script type="module" src="js/consulta/consulta.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Perú Solidario — Pago de sueldos y programas sociales</title>
+  <link rel="stylesheet" href="css/index.css">
+  <meta name="description" content="Banco Perú Solidario: banca estatal a cargo del pago de sueldos públicos y el desembolso de programas sociales a nivel nacional.">
+</head>
+<body>
+
+<!-- Íconos institucionales en SVG nativo -->
+<svg class="sprite-iconos" aria-hidden="true" style="display: none;">
+  <symbol id="icono-sello" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="21"></circle>
+    <path d="M12 20 L24 11 L36 20"></path>
+    <line x1="12" y1="20" x2="12" y2="34"></line>
+    <line x1="18" y1="20" x2="18" y2="34"></line>
+    <line x1="24" y1="20" x2="24" y2="34"></line>
+    <line x1="30" y1="20" x2="30" y2="34"></line>
+    <line x1="36" y1="20" x2="36" y2="34"></line>
+    <line x1="10" y1="34" x2="38" y2="34"></line>
+  </symbol>
+  <symbol id="icono-sueldo" viewBox="0 0 24 24">
+    <rect x="2" y="6" width="20" height="12" rx="1.5"></rect>
+    <circle cx="12" cy="12" r="3"></circle>
+    <line x1="5" y1="9" x2="5" y2="9"></line>
+    <line x1="19" y1="15" x2="19" y2="15"></line>
+  </symbol>
+  <symbol id="icono-programa" viewBox="0 0 24 24">
+    <path d="M12 20 C6 15.5 3 12.4 3 8.9 C3 6.2 5.1 4 7.7 4 C9.4 4 10.9 4.9 12 6.3 C13.1 4.9 14.6 4 16.3 4 C18.9 4 21 6.2 21 8.9 C21 12.4 18 15.5 12 20 Z"></path>
+  </symbol>
+  <symbol id="icono-cita" viewBox="0 0 24 24">
+    <rect x="3" y="5" width="18" height="16" rx="1.5"></rect>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+    <line x1="7" y1="2.5" x2="7" y2="7"></line>
+    <line x1="17" y1="2.5" x2="17" y2="7"></line>
+    <line x1="7" y1="14" x2="10" y2="14"></line>
+    <line x1="14" y1="14" x2="17" y2="14"></line>
+  </symbol>
+  <symbol id="icono-reclamo" viewBox="0 0 24 24">
+    <path d="M12 3 L21 20 L3 20 Z"></path>
+    <line x1="12" y1="9.5" x2="12" y2="14.5"></line>
+    <line x1="12" y1="17" x2="12" y2="17"></line>
+  </symbol>
+</svg>
+
+<p class="aviso-bar">
+  Horario de atención en agencias: lunes a viernes 8:00–18:00, sábados 8:00–13:00. Central telefónica 0800-1-1010, las 24 horas.
+</p>
+
+<!-- Encabezado con marca institucional y navegación -->
+<header class="site-header">
+  <div class="marca">
+    <svg class="marca-sello" aria-hidden="true" style="width: 40px; height: 40px; fill: white;"><use href="#icono-sello"></use></svg>
+    <div class="marca-texto">
+      <span class="marca-nombre">Banco Perú Solidario</span>
+      <span class="marca-lema">Banca del Estado peruano</span>
+    </div>
+  </div>
+  <nav class="nav-principal" aria-label="Navegación principal">
+    <ul>
+      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="consulta.html">Mis Registros</a></li>
+      <li><a href="registro.html">Inscripción</a></li>
+      <li><a href="login.html">Iniciar Sesión</a></li>
+      <li><button id="btn-logout" class="boton-logout">Cerrar Sesión</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Sección hero -->
+  <section class="hero" aria-labelledby="hero-titulo">
+    <div class="hero-texto">
+      <svg class="hero-emblema" aria-hidden="true" style="width: 50px; height: 50px; fill: #003366;"><use href="#icono-sello"></use></svg>
+      <p class="hero-antetitulo">Entidad de banca estatal</p>
+      <h1 id="hero-titulo">Sostenemos el pago del Perú que trabaja</h1>
+      <p class="hero-parrafo">
+        Procesamos la planilla de las entidades del Estado y entregamos los programas sociales
+        del Gobierno a través de la red de agencias con mayor alcance del país. Todos los meses,
+        millones de servidores públicos y beneficiarios reciben su pago a través de BPS.
+      </p>
+      <div class="hero-acciones">
+        <a class="boton boton-primario" href="registro.html">Inscribirse a Programa</a>
+        <a class="boton boton-secundario" href="#agencias">Ubicar mi agencia</a>
+      </div>
+    </div>
+    <img class="hero-imagen" src="img/hero-banco.svg" alt="Sede del Banco Perú Solidario frente a la cordillera" width="640" height="320">
+    <aside class="hero-ficha" aria-label="Cifras de operación de BPS">
+      <dl>
+        <div class="hero-ficha-dato">
+          <dt>Agencias a nivel nacional</dt>
+          <dd>1,850</dd>
+        </div>
+        <div class="hero-ficha-dato">
+          <dt>Servidores públicos con haber pagado por BPS</dt>
+          <dd>642,300</dd>
+        </div>
+        <div class="hero-ficha-dato">
+          <dt>Monto mensual desembolsado en sueldos</dt>
+          <dd>S/ 4,820 millones</dd>
+        </div>
+        <div class="hero-ficha-dato">
+          <dt>Beneficiarios de programas sociales atendidos</dt>
+          <dd>1,140,000</dd>
+        </div>
+      </dl>
+    </aside>
+  </section>
+
+  <!-- Sección de trámites -->
+  <section id="servicios" class="servicios" aria-labelledby="servicios-titulo">
+    <h2 id="servicios-titulo">Trámites disponibles</h2>
+    <p class="seccion-intro">
+      Cada trámite tiene un código de procedimiento (TUPA) asignado por la entidad, visible en la
+      constancia que se entrega al finalizar la atención.
+    </p>
+    <ul class="lista-tramites">
+      <li class="tramite" data-codigo="T-101">
+        <svg class="tramite-icono" aria-hidden="true" style="width: 24px; height: 24px;"><use href="#icono-sueldo"></use></svg>
+        <span class="tramite-codigo">T-101</span>
+        <div class="tramite-cuerpo">
+          <h3>Pago de sueldos del sector público</h3>
+          <p>Acreditación y cobro de haberes de planillas de entidades estatales adscritas a BPS.</p>
+        </div>
+      </li>
+      <li class="tramite" data-codigo="T-114">
+        <svg class="tramite-icono" aria-hidden="true" style="width: 24px; height: 24px;"><use href="#icono-programa"></use></svg>
+        <span class="tramite-codigo">T-114</span>
+        <div class="tramite-cuerpo">
+          <h3>Desembolso de programas sociales</h3>
+          <p>Cobro de bonos y subsidios del Estado en ventanilla o cajero, sin costo de mantenimiento.</p>
+        </div>
+      </li>
+      <li class="tramite" data-codigo="T-208">
+        <svg class="tramite-icono" aria-hidden="true" style="width: 24px; height: 24px;"><use href="#icono-cita"></use></svg>
+        <span class="tramite-codigo">T-208</span>
+        <div class="tramite-cuerpo">
+          <h3>Cita en agencia</h3>
+          <p>Reserva de horario de atención preferente para trámites de alto volumen documentario.</p>
+        </div>
+      </li>
+      <li class="tramite" data-codigo="T-330">
+        <svg class="tramite-icono" aria-hidden="true" style="width: 24px; height: 24px;"><use href="#icono-reclamo"></use></svg>
+        <span class="tramite-codigo">T-330</span>
+        <div class="tramite-cuerpo">
+          <h3>Reclamos y seguimiento</h3>
+          <p>Registro de incidencias sobre pagos no acreditados, cobros indebidos o atención en agencia.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Red de agencias -->
+  <section id="agencias" class="agencias" aria-labelledby="agencias-titulo">
+    <h2 id="agencias-titulo">Red de agencias por región</h2>
+    <ul class="lista-regiones">
+      <li>
+        <h3>Lima Metropolitana</h3>
+        <p>412 agencias</p>
+      </li>
+      <li>
+        <h3>Costa norte y sur</h3>
+        <p>486 agencias</p>
+      </li>
+      <li>
+        <h3>Sierra</h3>
+        <p>661 agencias</p>
+      </li>
+      <li>
+        <h3>Selva</h3>
+        <p>291 agencias</p>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer id="contacto" class="site-footer">
+  <div class="footer-columna">
+    <h2>Atención al público</h2>
+    <p>Central telefónica: 0800-1-1010 (gratuita, las 24 horas)</p>
+    <p>Sede central: Jr. Lampa 499, Cercado de Lima</p>
+  </div>
+  <p class="footer-legal">
+    Banco Perú Solidario es una entidad ficticia creada con fines académicos.
+  </p>
+</footer>
+
+<!-- Módulo JS con importaciones corregidas -->
+<script type="module">
+  import { cerrarSesion, temaSiHaySesion } from './js/auth/auth.js';
+  temaSiHaySesion();
+
+  // Cerrar sesión
+  const btnLogout = document.getElementById('btn-logout');
+  if (btnLogout) {
+    btnLogout.addEventListener('click', cerrarSesion);
+  }
+</script>
+
+</body>
+</html>

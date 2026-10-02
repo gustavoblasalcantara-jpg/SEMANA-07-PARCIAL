@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPS — Panel de Gestión Multirol</title>
+  <link rel="stylesheet" href="css/panel.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="marca">
+      <span class="marca-nombre">Banco Perú Solidario</span>
+    </div>
+    <nav class="nav-principal">
+      <ul>
+        <li><span id="user-info" class="badge-rol">Cargando...</span></li>
+        <li><button id="btn-logout" class="boton-logout">Cerrar Sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal" style="max-width: 1100px;">
+    <div id="stats" class="stats" aria-label="Resumen"></div>
+    <div class="tabs-header">
+      <button id="tab-tramites" class="tab-btn active">📋 Gestión de Trámites</button>
+      <button id="tab-quejas" class="tab-btn">⚠️ Libro de Quejas y Reclamos</button>
+      <button id="tab-usuarios" class="tab-btn" style="display:none;">👥 Usuarios</button>
+    </div>
+
+    <!-- SECCIÓN 1: GESTIÓN DE TRÁMITES -->
+    <section id="sec-tramites" class="tab-content active">
+      <div class="tarjeta-panel">
+        <h3 id="form-titulo">Registrar Trámite Presencial / Telefónico</h3>
+        <form id="form-panel">
+          <input type="hidden" id="pnl-id">
+          
+          <input type="text" id="pnl-nombre" placeholder="Beneficiario" required>
+          <input type="text" id="pnl-dni" placeholder="DNI (8 dígitos)" pattern="[0-9]{8}" maxlength="8" required>
+          
+          <select id="pnl-programa" required>
+            <option value="">-- Selección de Programa --</option>
+            <option value="Apoyo Directo al Hogar">Apoyo Directo al Hogar</option>
+            <option value="Bono Vejez Digna">Bono Vejez Digna</option>
+            <option value="Sueldo Joven Rural">Sueldo Joven Rural</option>
+            <option value="Cuna y Nutrición">Cuna y Nutrición</option>
+          </select>
+
+          <select id="pnl-estado" required>
+            <option value="registrado">registrado</option>
+            <option value="atendido">atendido</option>
+          </select>
+
+          <button type="submit" id="pnl-btn-submit" class="boton boton-primario">Guardar</button>
+          <button type="button" id="pnl-btn-cancel" class="boton" style="display:none;">Cancelar</button>
+        </form>
+      </div>
+
+      <table class="tabla-panel-crud">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Beneficiario</th>
+            <th>DNI</th>
+            <th>Programa</th>
+            <th>Estado</th>
+            <th>Origen</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-panel">
+          <tr><td colspan="7">Cargando registros...</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECCIÓN 2: LIBRO DE QUEJAS Y RECLAMOS -->
+    <section id="sec-quejas" class="tab-content" style="display:none;">
+      <h3>Libro de Quejas y Reclamos</h3>
+      <table class="tabla-panel-crud"><thead><tr><th>N°</th><th>Ciudadano</th><th>Tipo</th><th>Descripción</th><th>Estado</th><th>Acción</th></tr></thead>
+      <tbody id="tabla-quejas"></tbody></table>
+    </section>
+
+    <section id="sec-usuarios" class="tab-content" style="display:none;">
+      <div class="tarjeta-panel">
+        <h3>Crear cuenta de personal</h3>
+        <form id="form-usuario" class="form-usuario">
+          <input type="text" id="usr-nombre" placeholder="Nombre completo" required minlength="3" autocomplete="off">
+          <input type="email" id="usr-correo" placeholder="correo@bps.pe" required autocomplete="off">
+          <input type="password" id="usr-pass" placeholder="Contraseña (mín. 4)" required minlength="4" autocomplete="new-password">
+          <select id="usr-rol" required aria-label="Rol">
+            <option value="empleado">Empleado</option>
+            <option value="administrador">Administrador</option>
+          </select>
+          <button type="submit" class="boton boton-primario">Crear cuenta</button>
+        </form>
+        <p id="usr-msg" class="usr-msg" role="status"></p>
+      </div>
+      <table class="tabla-panel-crud"><thead><tr><th>ID</th><th>Nombre</th><th>Correo</th><th>Rol</th><th>Acciones</th></tr></thead>
+      <tbody id="tabla-usuarios"></tbody></table>
+    </section>
+  </main>
+
+  <script type="module" src="js/panel/panel.js"></script>
+</body>
+</html>

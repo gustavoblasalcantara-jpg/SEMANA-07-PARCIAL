@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPS — Inscripción a Programa Social</title>
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="marca">
+      <span class="marca-nombre">Banco Perú Solidario</span>
+    </div>
+    <nav class="nav-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="consulta.html">Mis Registros</a></li>
+        <li><button id="btn-logout" class="boton-logout">Cerrar Sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <h2>Formulario de Inscripción a Programa Social</h2>
+    <p>Complete los datos requeridos para solicitar su inscripción:</p>
+
+    <form id="form-registro-programa" class="formulario">
+      <div class="campo">
+        <label for="reg-nombre">Nombre del Beneficiario</label>
+        <input type="text" id="reg-nombre" placeholder="Nombre y Apellidos completos" required minlength="3">
+      </div>
+
+      <div class="campo">
+        <label for="reg-dni">DNI</label>
+        <input type="text" id="reg-dni" placeholder="8 dígitos" required pattern="[0-9]{8}" maxlength="8">
+      </div>
+
+      <div class="campo">
+        <label for="reg-programa">Programa Social al que Postula</label>
+        <select id="reg-programa" required>
+          <option value="">-- Seleccione un Programa --</option>
+          <option value="Apoyo Directo al Hogar">Apoyo Directo al Hogar</option>
+          <option value="Bono Vejez Digna">Bono Vejez Digna</option>
+          <option value="Sueldo Joven Rural">Sueldo Joven Rural</option>
+          <option value="Cuna y Nutrición">Cuna y Nutrición</option>
+        </select>
+      </div>
+
+      <button type="submit" class="boton boton-primario">Enviar Inscripción</button>
+    </form>
+  </main>
+
+  <script type="module" src="js/registro/registro.js"></script>
+</body>
+</html>

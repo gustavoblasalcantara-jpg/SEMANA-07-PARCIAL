@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPS — Ubicación de Cajeros</title>
+  <link rel="stylesheet" href="css/cajeros.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="marca"><span class="marca-nombre">Banco Perú Solidario</span></div>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><button id="btn-logout" class="boton-logout">Cerrar Sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contenedor-principal">
+    <h1>Cajeros y agencias en Huancayo</h1>
+    <p>Selecciona un punto para verlo en el mapa. Ubicaciones referenciales.</p>
+    <div class="cajeros-grid">
+      <ul id="lista-cajeros" class="lista-cajeros"></ul>
+      <div class="mapa-caja">
+        <iframe id="mapa" title="Mapa de cajeros del Banco Perú Solidario" loading="lazy"></iframe>
+        <a id="link-mapa" class="boton" target="_blank" rel="noopener" href="#">Abrir en mapa grande</a>
+      </div>
+    </div>
+    <img class="img-cajero" src="img/cajero.svg" alt="Ilustración de cajero automático" width="120" height="144">
+  </main>
+  <script type="module" src="js/cajeros/cajeros.js"></script>
+</body>
+</html>

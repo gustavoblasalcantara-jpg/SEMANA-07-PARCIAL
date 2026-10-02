@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPS — Editar Trámite</title>
+  <link rel="stylesheet" href="css/actualizar.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="marca">
+      <span class="marca-nombre">Banco Perú Solidario</span>
+    </div>
+    <nav class="nav-principal">
+      <ul>
+        <li><a href="consulta.html">Mis Registros</a></li>
+        <li><button id="btn-logout" class="boton-logout">Cerrar Sesión</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <h2>Editar Inscripción a Programa Social</h2>
+    <div id="mensaje-estado"></div>
+
+    <form id="form-actualizar-programa" class="formulario">
+      <input type="hidden" id="act-id">
+
+      <div class="campo">
+        <label for="act-nombre">Nombre del Beneficiario</label>
+        <input type="text" id="act-nombre" required minlength="3">
+      </div>
+
+      <div class="campo">
+        <label for="act-dni">DNI</label>
+        <input type="text" id="act-dni" required pattern="[0-9]{8}" maxlength="8">
+      </div>
+
+      <div class="campo">
+        <label for="act-programa">Programa Social al que Postula</label>
+        <select id="act-programa" required>
+          <option value="Apoyo Directo al Hogar">Apoyo Directo al Hogar</option>
+          <option value="Bono Vejez Digna">Bono Vejez Digna</option>
+          <option value="Sueldo Joven Rural">Sueldo Joven Rural</option>
+          <option value="Cuna y Nutrición">Cuna y Nutrición</option>
+        </select>
+      </div>
+
+      <button type="submit" id="btn-guardar" class="boton boton-primario">Guardar Cambios</button>
+      <a href="consulta.html" class="boton">Cancelar</a>
+    </form>
+  </main>
+
+  <script type="module" src="js/actualizar/actualizar.js"></script>
+</body>
+</html>
